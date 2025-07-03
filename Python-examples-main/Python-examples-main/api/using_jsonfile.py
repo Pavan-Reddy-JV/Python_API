@@ -10,7 +10,7 @@ header = {
 #    "name": "Subba",
 #    "job": "leader"
 #}
-json_file = open('api/exa.json')
+json_file = open('api/exa.json','r')
 payload = json_file.read()
 
 response = requests.post(base_url + 'api/users', headers=header, data=payload)
