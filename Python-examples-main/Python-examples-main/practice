@@ -1,0 +1,207 @@
+Principal,Rate,Time = map(int,input().split())
+sum = Principal * Rate * Time
+total = sum // 100
+print("the total sum",total)
+
+
+#####Swap numbers####
+t = int(input())
+for _ in range(t):
+  a, b = map(int, input().split()) # Indented this line by 4 spaces
+  print("the sum of",a,"and",b,"is:",a + b )
+
+
+#####Condition stmts#####
+str=input()
+if str.islower():
+  print(str.upper())
+elif str.isupper():
+  print("It is correct") 
+else :
+  print(str.swapcase())
+
+####example:2 we can use or stmt
+str=input()
+if str.islower() or str.isdigit():
+    print(str.isdecimal())
+
+######example:3 odd and even numbers
+a = int(input())
+if a % 2 ==0:
+  print("even")
+else:
+  print("odd")
+
+#######example:4 positive & negative numbers
+a = int(input())
+if a == 0:
+  print("positive")
+else:
+  print("negative")
+
+#######example:5 swap two numbers 
+a, b = map(int,input().split() )
+a ,b = b,a
+print(a,b) 
+
+#####example:6 while loop
+a = int(input())
+while a > 0:
+  print("the value of a is:",a)
+  a = a - 1
+print("nothing")
+
+##runtime error
+i = 0
+while i < 5:
+  if i == 2:
+    continue
+  else:
+    print(i,end = " ")
+    i += 1
+
+#####example:7 for loops
+for a in range(1,8,4):
+  print(a)
+
+for a in range(10,1,-2):
+  print(a)
+
+#fruits = ["apple", "banana", "cherry","muskmelon"]
+str = input()
+for letter in str:
+    print(letter)
+
+######example:8 Factorial number
+n = int(input())
+ans = 1
+if n < 0:
+  print("error")
+elif n==0:
+  print("1")
+else:
+  for i in range(1,n+1):
+    ans = ans * i
+print(ans)
+
+
+#####example:9 Nth power
+x, y =map(int,input().split())
+x **= y
+print(x) 
+
+######example:10 even and odd sum 
+a = int(input())
+ans = 0
+for i in range(1,a+1):
+  if i % 2 == 0:  ////if i % 2 != 0:
+    ans =ans + i
+print(ans)
+
+#####example:11 Fahrenheit to Celsius
+Fahren = int(input())
+celsius = (Fahren- 32 ) * 5 / 9
+print(celsius)
+#####Celsius to Fahrenheit
+Celsius = int(input())
+Fahren = (celsius * 9 / 5) + 32
+print(Fahren)
+
+######example:12  sumof even & odd numbers by using strings
+a = input()
+even =0
+odd =0
+for i in a:
+  if int(i) % 2 == 0:
+      even = even + int(i)
+  else:
+    odd = odd + int(i)
+print(even,odd)
+
+#####with the integer
+a = int(input("enter the number"))
+even =0
+odd =0
+for i in range(a):
+  if i % 2 == 0:
+      even = even + i
+  else:
+    odd = odd + i
+print("the sum of even is:",even,"the sum of odd is:",odd)
+
+
+
+#########String types#########
+a = 'pavan'
+print(a[-1])
+
+te = input('please enter the name ')
+print("welcome {},are you doing good?".format(te))
+
+word = 'p a v a n'
+print(word.split( ))
+
+##Counter function
+from typing import Counter
+str = input()
+k = str.split()
+print(Counter(k))
+
+#######LISTS & Tuples
+d = [2,3,4.5,'pavan']--->lists(ordering,mutable,indexing,allows duplicate)##{insert,append,extend}----> this are attributes for the list
+e = (2,3,4.5,'pavan')---->tuples(ordering,not-mutable,indexing,allows duplicate)
+#d[3] = 'reddy'---->Indexing
+print(d[1:3])----->slice
+
+######SETS & Dictonaries
+fruit ={'1','apple','banana','cherry'}--->sets(not-ordering,mutable,not-indexing,duplication is not allowed)
+print(fruit)
+###Add attribute
+fruit.add('orange')
+print(fruit)
+###remove attribute
+fruit.remove('banana')
+print(fruit)
+###membership
+print('banana' not in fruit )
+
+#####Dictonaries example####
+student = {'name' :input(),'age' : input(),'grade' : input()}---->(ordering after 3.7,mutable,indexing,duplication is not allowed)
+if student['grade'] == 'A':
+  print("Outstanding perfromer",student)
+else :
+  print("Average",student)
+print(student)
+
+Adding
+student ['course']= ['Math','Science']
+
+for key,value in student.items():
+  print(key,value)
+
+d1 ={"marks":90,"grade":"A"}
+d2 ={"marks":80,"grade":"B"}
+d1.get("marks") > d2.get("marks")
+
+
+
+#####functions######
+def test(name):
+  print(f"Hi,{name}")
+test("pavan")
+
+
+def app(a):
+  print(f"Hello Guys {a}")
+app("pavan")
+
+
+def exa(name):
+
+  """
+  This for the printing the name
+  """
+  print(f"Hi,{name}")
+print(exa.__doc__)
+
+output:: This for the printing the name
